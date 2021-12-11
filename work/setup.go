@@ -5,7 +5,7 @@ import (
 	"os/exec"
 )
 
-func setup_Ubuntu() {
+func SetupUbuntu() {
 	fmt.Printf("[+] start setup Ubuntu\n")
 
 	out, err := exec.Command("echo", "foobar").Output()

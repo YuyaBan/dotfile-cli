@@ -19,13 +19,17 @@ func main() {
 		return
 	}
 
-	fmt.Printf("You choose %q\n", result)
+	// fmt.Printf("You choose %q\n", result)
 
 	switch result {
 	case "MacOS":
 		work.setup_Ubuntu()
+		fmt.Printf("You choose %q\n", result)
 	case "Windows":
+		fmt.Printf("You choose %q\n", result)
 	case "Ubuntu":
+		fmt.Printf("You choose %q\n", result)
 	case "CentOS":
+		fmt.Printf("You choose %q\n", result)
 	}
 }
