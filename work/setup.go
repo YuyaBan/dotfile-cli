@@ -1,13 +1,18 @@
 package work
 
-import {
+import (
 	"fmt"
-}
+	"os/exec"
+)
 
-func setup_Ubuntu () {
+func setup_Ubuntu() {
 	fmt.Printf("[+] start setup Ubuntu\n")
 
-	out, err := execCommand("echo", "foobar").Output
+	out, err := exec.Command("echo", "foobar").Output()
+	if err != nil {
+		fmt.Printf("execCommand faild %v\n", err)
+		return
+	}
 
 	fmt.Println(string(out))
 }
