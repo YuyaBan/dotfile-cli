@@ -1,4 +1,4 @@
-module sampleCli
+module dotfile-cli
 
 go 1.17
 
