@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/YuyaBan/dotfile-cli/work"
 	"github.com/manifoldco/promptui"
 )
 
@@ -23,13 +24,9 @@ func main() {
 
 	switch result {
 	case "MacOS":
-		work.setup_Ubuntu()
-		fmt.Printf("You choose %q\n", result)
 	case "Windows":
-		fmt.Printf("You choose %q\n", result)
 	case "Ubuntu":
-		fmt.Printf("You choose %q\n", result)
+		work.SetupUbuntu()
 	case "CentOS":
-		fmt.Printf("You choose %q\n", result)
 	}
 }
