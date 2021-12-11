@@ -1,4 +1,4 @@
-module dotfile-cli
+module github.com/YuyaBan/dotfile-cli
 
 go 1.17
 
