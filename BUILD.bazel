@@ -1,0 +1,24 @@
+# gazelle:proto disable_global
+
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/YuyaBan/dotfile-cli
+gazelle(name = "gazelle")
+
+go_library(
+    name = "dotfile-cli_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/YuyaBan/dotfile-cli",
+    visibility = ["//visibility:private"],
+    deps = [
+        "//work",
+        "@com_github_manifoldco_promptui//:promptui",
+    ],
+)
+
+go_binary(
+    name = "dotfile-cli",
+    embed = [":dotfile-cli_lib"],
+    visibility = ["//visibility:public"],
+)

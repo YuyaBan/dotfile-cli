@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "work",
+    srcs = ["setup.go"],
+    embedsrcs = ["scripts/install.sh"],
+    importpath = "github.com/YuyaBan/dotfile-cli/work",
+    visibility = ["//visibility:public"],
+)
